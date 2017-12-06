@@ -9,5 +9,6 @@ public class TestClass {
         System.out.println(a);
         System.out.println(EuclidAlgorithm.getInstatnce().simpleEuclid(18, 12));
         System.out.println(EuclidAlgorithm.getInstatnce().fastEuclid(18, 12));
+        System.err.println(ChangeSystemOfCalculation.getInstance().getNumberInAnotherSystem(2,16));
     }
 }
