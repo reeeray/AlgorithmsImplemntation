@@ -1,5 +1,8 @@
 package geekAlgorithms;
 
+import java.security.SecureRandom;
+import java.util.Random;
+
 public class QuickPow {
     public static QuickPow myInstatnce = new QuickPow();
 
@@ -20,4 +23,8 @@ public class QuickPow {
         }
         return res;
     }
+
+    public static Random rand = new Random();
+
+    public static SecureRandom secureRandom = new SecureRandom(); // для задач связанных с шифрованием(криптографией)
 }
