@@ -1,6 +1,9 @@
 package geekAlgorithms;
 
-import sun.util.calendar.Era;
+import geekAlgorithms.theoryAndRealization.ChangeSystemOfCalculation;
+import geekAlgorithms.theoryAndRealization.EratosfenAlg;
+import geekAlgorithms.theoryAndRealization.EuclidAlgorithm;
+import geekAlgorithms.theoryAndRealization.QuickPow;
 
 public class TestClass {
 

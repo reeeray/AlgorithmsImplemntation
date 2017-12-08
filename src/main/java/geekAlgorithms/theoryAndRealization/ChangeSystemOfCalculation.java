@@ -1,4 +1,4 @@
-package geekAlgorithms;
+package geekAlgorithms.theoryAndRealization;
 
 /**
  * Created by Григорий on 06.12.2017.

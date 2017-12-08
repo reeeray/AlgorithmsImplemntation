@@ -1,8 +1,6 @@
-package geekAlgorithms;
+package geekAlgorithms.theoryAndRealization;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 
 /**
  * Created by Григорий on 07.12.2017.

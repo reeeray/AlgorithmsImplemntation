@@ -1,4 +1,4 @@
-package geekAlgorithms;
+package geekAlgorithms.theoryAndRealization;
 
 import java.security.SecureRandom;
 import java.util.Random;
