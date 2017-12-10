@@ -3,15 +3,24 @@ package geekAlgorithms.homeTasks;
 import geekAlgorithms.theoryAndRealization.QuickPow;
 
 import java.io.*;
+import java.util.Random;
 import java.util.Scanner;
+import java.util.regex.Matcher;
 
 public class Task1 {
 
     public static void main (String ... args) {
         Task1 task1 = new Task1();
-
-        task1.indexOfWeight();
-        task1.maxNumber();
+        task1.randomize();
+//        task1.indexOfWeight();
+//        task1.maxNumber();
+//        task1.swapSimple(5, 7);
+//        task1.swapQuick(5, 7);
+//        task1.getRootOfSqueareEquation();
+            System.out.println(MyRandom.getInstance().myRand());
+        System.out.println(MyRandom.getInstance().myRand());
+        System.out.println(MyRandom.getInstance().myRand());
+        System.out.println(MyRandom.getInstance().myRand());
     }
 
     private void indexOfWeight () {
@@ -84,4 +93,99 @@ public class Task1 {
         }
 
     }
+
+    private void swapSimple (int a, int b) {
+        int c = 0;
+        System.out.print("First data is : " + a + ", " + b);
+        c = a;
+        a = b;
+        b = c;
+        System.out.println(" Swap is : " + a + ", " + b);
+    }
+
+    private void swapQuick(int a, int b) {
+        System.out.print("First data is : " + a + ", " + b);
+        a =a^b; //если 5 и 7, то тут получается 2(промежуточное значение)
+        b = a ^ b;
+        a = a ^ b;
+        System.out.println(" Swap is : " + a + ", " + b);
+    }
+
+    private void getRootOfSqueareEquation () {
+        Scanner scanner = new Scanner(System.in);
+        int a = 0;
+        int b = 0;
+        int c = 0;
+        System.out.println("Decision of square equation like A*x^2 + B*x + C = 0");
+        System.out.print("Enter A : ");
+        while (true) {
+            if (scanner.hasNextInt()) {
+                a = scanner.nextInt();
+                break;
+            } else {
+                System.out.println("\n Incorrect type. Try again. ");
+            }
+        }
+
+        System.out.printf("\n Decision of square equation like %d*x^2 + B*x + C = 0", a);
+        System.out.println("\nEnter B : ");
+        while (true) {
+            if (scanner.hasNextInt()) {
+                b = scanner.nextInt();
+                break;
+            } else {
+                System.out.println("\n Incorrect type. Try again. ");
+            }
+        }
+
+        System.out.printf("\nDecision of square equation like %d*x^2 + %d*x + C = 0", a , b);
+        System.out.print("\nEnter C : ");
+        while (true) {
+            if (scanner.hasNextInt()) {
+                c = scanner.nextInt();
+                break;
+            } else {
+                System.out.println("\n Incorrect type. Try again. ");
+            }
+        }
+        System.out.printf("\nDecision of square equation like %d*x^2 + %d*x + %d = 0", a , b, c);
+
+        double descriminant = QuickPow.myInstatnce.pow(b, 2) - 4* a*c;
+        double root1 = (-b + Math.sqrt(descriminant))/(2*a);
+        double root2 = (-b - Math.sqrt(descriminant))/(2*a);
+        System.out.println("root1 is " + root1 + " root2 is " + root2);
+    }
+
+    private void seasonOfYear (int number) {
+        switch (number) {
+            case 12:
+            case 1:
+            case 2:
+                System.out.println("Winter");
+            case 3:
+            case 4:
+            case 5:
+                System.out.println("Spring");
+            case 6:
+            case 7:
+            case 8:
+                System.out.println("Summer");
+            case 9:
+            case 10:
+            case 11:
+                System.out.println("Autumn");
+        }
+    }
+
+    private int randomize () {
+        int result = (int)(Math.random()*100) - (int)(Math.random()*10);
+        System.out.println(result);
+
+        Random rand = new Random(System.currentTimeMillis());//определяем начальную точку случайной последовательности
+        System.out.println(rand.nextInt(100));
+        return rand.nextInt(100);
+        //return result;
+    }
+
+
 }

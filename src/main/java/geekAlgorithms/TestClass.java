@@ -24,5 +24,6 @@ public class TestClass {
         System.out.print("Eratosfen : ");
         EratosfenAlg.myInstance.eratosfenSieve(23);
         System.out.println("\n");
+
     }
 }
