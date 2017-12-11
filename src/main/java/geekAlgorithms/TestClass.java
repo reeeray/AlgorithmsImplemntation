@@ -1,11 +1,12 @@
 package geekAlgorithms;
 
-import geekAlgorithms.theoryAndRealization.ChangeSystemOfCalculation;
-import geekAlgorithms.theoryAndRealization.EratosfenAlg;
-import geekAlgorithms.theoryAndRealization.EuclidAlgorithm;
-import geekAlgorithms.theoryAndRealization.QuickPow;
+import geekAlgorithms.theoryAndRealization.*;
+
+import java.util.Arrays;
 
 public class TestClass {
+
+    public static int [] array = {4, 1, 6, 3,8,14,7,24};
 
     public static void main (String ... args) {
         int a = 8;
@@ -24,6 +25,7 @@ public class TestClass {
         System.out.print("Eratosfen : ");
         EratosfenAlg.myInstance.eratosfenSieve(23);
         System.out.println("\n");
+        System.out.println("Sorted is " + Arrays.toString(PopularSortedAlgorithms.getInstance().bubbleSort(array)));
 
     }
 }
