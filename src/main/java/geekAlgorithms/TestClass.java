@@ -6,7 +6,9 @@ import java.util.Arrays;
 
 public class TestClass {
 
-    public static int [] array = {4, 1, 6, 3,8,14,7,24};
+    public static int [] array1 = {4, 1, 6, 3,8,14,7,24};
+    public static int [] array2 = {4, 5, 6, 3,8,1,7,13,24};
+    public static int [] array3 = {13, 11, 1, 3,8,4,7,24, 14};
 
     public static void main (String ... args) {
         int a = 8;
@@ -25,7 +27,9 @@ public class TestClass {
         System.out.print("Eratosfen : ");
         EratosfenAlg.myInstance.eratosfenSieve(23);
         System.out.println("\n");
-        System.out.println("Sorted is " + Arrays.toString(PopularSortedAlgorithms.getInstance().bubbleSort(array)));
-
+        System.out.println("Sorted by bubble is " + Arrays.toString(PopularSortedAlgorithms.getInstance().bubbleSort(array3)));
+        System.out.println("Recursion pow : " + QuickPow.getInstance().recursionPow(2,5));
+        System.out.println("Sorted by choosen is " + Arrays.toString(PopularSortedAlgorithms.getInstance().choosenSort(array2)));
+        System.out.println("Sorted by shake is " + Arrays.toString(PopularSortedAlgorithms.getInstance().shakeSort(array1)));
     }
 }

@@ -24,6 +24,16 @@ public class QuickPow {
         return res;
     }
 
+    public long recursionPow(int number, int degree) {
+        if(degree == 0) {
+            return 1;
+        }else if (degree%2==0){
+           return recursionPow(number,degree/2) * recursionPow(number,degree/2);
+        }else {
+            return number* recursionPow(number, degree-1);
+        }
+    }
+
     public static Random rand = new Random();
 
     public static SecureRandom secureRandom = new SecureRandom(); // для задач связанных с шифрованием(криптографией)
